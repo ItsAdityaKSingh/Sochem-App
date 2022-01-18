@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sochem/screen/cloud.dart';
 import 'package:sochem/utils/constants.dart';
 
 class HomeScreenGrid extends StatelessWidget {
@@ -13,7 +14,15 @@ class HomeScreenGrid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SingleCard(image: FeedIcon, title: "Feed"),
-              SingleCard(image: CloudIcon, title: "Cloud"),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const CloudPage()),
+                    );
+                  },
+                  child: SingleCard(image: CloudIcon, title: "Cloud")),
             ],
           ),
           Row(
