@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sochem/screen/home_screen.dart';
 import 'package:sochem/screen/onboarding_screen.dart';
